@@ -2,18 +2,38 @@
 <html>
 	<head lang="en">
 		<title>Desaturation</title>	
-		<script src="./src/color.js"></script>
-		<script src="./src/desaturation.js"></script>
-		<script src="./src/main.js"></script>
 		<style>
 			body {
 				margin: 0px;
 				overflow: hidden;
 			}
+
+            input {
+                margin: 20px
+            }
 		</style>
 
 	</head>
 	<body>
 		<canvas id="mainCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+        <div class="slidecontainer">
+            <div>
+                <div><label>Red</label></div>
+                <input type="range" min="0" max="100" value="100" class="slider" id="redRange">
+            </div>
+            <div>
+                <div><label>Green</label></div>
+                <input type="range" min="0" max="100" value="50" class="slider" id="greenRange">
+            </div>
+            <div>
+                <div><label>Blue</label></div>
+                <input type="range" min="0" max="100" value="0" class="slider" id="blueRange">
+            </div>
+        </div>
+
+		<script src="./src/color.js"></script>
+		<script src="./src/desaturation.js"></script>
+		<script src="./src/main.js"></script>
 	</body>
 </html>
